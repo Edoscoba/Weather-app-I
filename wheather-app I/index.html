@@ -1,0 +1,76 @@
+ <!-- Created b Obi simon -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <!-- importing sweet alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- importing material icons -->
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<!-- importing jquery -->
+		<script src="https://code.jquery.com/jquery-3.1.1.js"></script>
+		<!-- importing Cairo font family -->
+		<link href='https://fonts.googleapis.com/css?family=Cairo' rel='stylesheet'>
+	</head>
+</head>
+<body onload="alert()">
+
+    <div id="maincard" class="hide anime-fade anime-fastest">
+        <div id="card" class="card">
+            <div id="menu_option">
+                <i class="material-icons" onclick="ask()">edit_location</i>
+            </div>
+            <div id="help"> <i class="material-icons"></i> </div>
+            <div class="heading"></div>
+            <div class="place"><div id="place"></div></div>
+            <br>
+            <div class="date"><div id="date"></div></div>
+            <br>
+            <br>
+            <br>
+            <div class="temperature"><div id="temperature"></div></div>
+            <div id="climat"><div class="climate"><div id="climate"></div></div></div>
+            <div class="line"></div>
+        </div>
+    </div>
+
+
+    <div class="popup card anime-zoom text-bright" id="card-prompt">
+    <h2> Enter Your Location</h2>
+    <hr class="bright">
+
+    <input class="inp" placeholder="Enter Your City Name" id="enter"></input>
+    <h2 id="h2">Choose Unit of Temperature</h2>
+    <select id="select">
+        <option value="">Degree Celcius</option>
+        <option value="">Fahrenheit</option>
+    </select><br>
+    <button class="btn lime right" onclick="submition()">Submit</button>
+    <button class="red btn left" onclick="cancel()">Cancel</button>
+    <div id="help">
+        <i onclick="help()" class="material-icons">help</i>
+    </div>
+        </div>
+
+        <div class="popup card anime-zoom text-bright" id="help-card">
+            <h2>Help</h2>
+            ❄☀☁ Enter the name of the place you want to find the Weather or to edit the location tap the edit location icon on the top left <br>
+            <button class="btn red" onclick="closeHelp()">Close</button>
+        </div>
+
+        <div id="toast"></div>
+
+        <div id="menu-help">
+            <button class="btn"><--</button>
+        </div>
+        <!--********** Cloud Loader ********** -->
+        <div class="loader-wrapper" id="1-w">
+            <div><div></div><div></div></div>
+            <h1>Edoscoba</h1>
+        </div>
+
+        <!--********** :Loader end: ********** --> 
+</body>
+</html>
